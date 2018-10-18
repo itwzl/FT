@@ -1,0 +1,144 @@
+.grid{
+	width: 500px;
+	height: 370px;
+	position: absolute;
+	left: 50%;
+	top: 170px;
+	opacity: 0;
+	margin-left: -250px;
+	border: 1px solid #997;
+	background: #fff;
+	border-radius: 20px;
+	overflow: hidden;
+	user-select:none;
+	z-index: 4;
+}
+.login_fog{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: gray;
+    opacity: 0.3;
+    z-index: 3;
+    display: none;
+}
+.login_info{
+    width: 250px;
+    height: 25px;
+    position: absolute;
+    left: 50%;
+    margin-left: -65px;
+    top: 85px;
+}
+.login_info p{
+    position: absolute;
+    left: 36%;
+    margin-left: -65px;
+    top: -10px;
+    color: red;
+}
+.grid input[type=text]{
+	position: absolute;
+	width: 250px;
+	height: 30px;
+	top: 120px;
+	left: 50%;
+    margin-left: -125px;
+	border: 2px solid #28BFAC;
+	border-radius: 5px;
+	padding-left: 30px;
+	font-size: 18px;
+	padding-top: 3px;
+	outline: none;
+	background: url(/static/imgs/手机号.png) no-repeat;
+	background-size: 25px;
+	background-position: 2px 5px;
+	
+}
+.grid input[type=password]{
+	position: absolute;
+	width: 250px;
+	height: 30px;
+	top: 180px;
+	left: 50%;
+    margin-left: -125px;
+	border: 2px solid #28BFAC;
+	border-radius: 5px;
+	padding-left: 30px;
+	font-size: 18px;
+	padding-top: 3px;
+	outline: none;
+	background: url(/static/imgs/密码.png) no-repeat;
+	background-size: 25px;
+	background-position: 2px 5px;
+}
+.grid input[type=button]{
+	position: absolute;
+	width: 285px;
+	height: 40px;
+	top: 240px;
+	left: 50%;
+    margin-left: -125px;
+	border: 2px solid #28BFAC;
+	border-radius: 5px;
+	padding-left: 20px;
+	font-size: 18px;
+	padding-top: 3px;
+	outline: none;
+	background: #28BFAC;
+}
+.footsetting{
+	width: 235px;
+	height: 30px;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	/*border: 1px solid;*/
+	font-size: 14px;
+	color: #999;
+}
+.footsetting a{
+	margin-left: 5px;
+}
+.footsetting a:hover{
+	color: #28BFAC;
+	cursor: pointer;
+}
+.close{
+	width: 50px;
+	height: 40px;
+	position: absolute;
+	right: -10px;
+	top: -5px;
+	/*border: 1px solid;*/
+	font-size: 30px;
+	padding-left: 10px;
+	transition: 1s;
+	border-radius: 3px;
+	
+}
+.close:hover{
+	background: #ff0033;
+}
+.success{
+	width: 400px;
+	height: 200px;
+	border: 1px solid #000000;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -200px;
+	margin-top: -100px;
+	border-radius: 10px;
+	background-color: white;
+	z-index: 4;
+	display: none;
+}
+.success input[type=button]{
+    width: 120px;
+    height: 30px;
+    left: 50%;
+    margin-left: -60px;
+    position: absolute;
+    bottom: 40px;
+}

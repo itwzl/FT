@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>饭团</title>
+	</head>
+	<link rel="stylesheet" href="/static/style/style_main.css" />
+	<link rel="stylesheet" href="/static/style/style_float.css">
+	<script type="text/javascript" src="/static/js/funf_alternate.js" ></script>
+    <script src="/static/js/jquery-3.3.1.js"></script>
+    <script src="/static/js/login_Ajax.js"></script>
+    <style>
+        .gross{width: 1200px;height: 530px;position: relative;left: 50%;margin-left: -600px;top: 130px}
+    </style>
+	<body onload="test1()">
+    <!--此处为顶部左边-->
+		<div class="top">
+			<div class="location">
+				<img src="/static/imgs/定位.png" width="20px" />&nbsp;&nbsp;<a style="position: absolute;top: 10px;">武汉</a>
+				<div style="position: absolute;border: 1px solid #666666;width: 52px;height: 17px;top: 10px;left: 60px;">
+					<a style="margin-top: -1px;position: absolute;">切换城市</a></div><a style="position: absolute;left: 130px;"> [江夏区]</a></div>
+			<div class="login"><a style="color: #28BFAC;" onclick="document.getElementById('login_grid').style.opacity='1';document.getElementById('login_fog').style.display='block'">立即登录</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/ftapp/register" style="color: #999;">注册</a>
+            </div>
+		<!--此处为顶部右边-->
+		<div class="rightSet">
+			<a>我的饭团</a><a>商家中心</a><a>关于团队</a><a>意见反馈</a>
+		</div>
+		</div>
+		<!--此处为头部-->
+		<div class="head">
+			<img src="/static/imgs/饭团.png" width="40px" style="left: 40px;position: absolute;"/>&nbsp;
+			<a style="font-size: 40px;color: #28BFAC;top :22px;position: absolute;left:85px;font-family: '黑体';">饭团</a>
+			<!--此处为搜索框-->
+
+			<input type="text" placeholder="搜索商家或地点"/>
+			<div class="hint">
+				<a>武汉欢乐谷</a><a>光谷</a><a>金釜山牛排海鲜自助</a><a>重庆火锅</a><a>黄鹤楼</a><a>聚餐宴请</a>
+			</div>
+			<div class="serchBac"></div>
+			<div class="serch"><img src="/static/imgs/搜索.png" width="30px"style="position: absolute;top: 5px;left: 5px;"></div>
+			<img src="/static/imgs/right.png" style="position: absolute;left: 950px;top: 20px;"/>
+		</div>
+    {# 此处为悬浮登录框#}
+    <div class="login_fog" id="login_fog" onclick="document.getElementById('login_grid').style.opacity=0;this.style.display='none';"></div>
+    <div class="grid" id="login_grid">
+            <div class="login_info">
+            <img src="/static/imgs/信息.png" width="20px" style="display: none" id="login_grid_error"><p id="login_grid_p"></p></div>
+			<div class="close" onclick="document.getElementById('login_grid').style.opacity='0';document.getElementById('login_fog').style.display='none';">×</div>
+			<p style="position: absolute; left:50%;margin-left: -65px;;top: 20px;font-size: 25px;">欢迎登录饭团</p>
+			<input type="text" placeholder="请输入手机账号" id="lg_count" />
+			<input type="password" placeholder="请输入密码" id="lg_password" />
+			<input type="button" value="登录" id="lg_button" />
+			<div class="footsetting">
+				<a>忘记密码?</a><a>|</a><a href="/ftapp/register/">注册账号</a><a>|</a><a>意见反馈</a>
+			</div>
+		</div>
+		<div class="bodyfog"></div>
+    <div class="gross">
+		<!--此处为图片区-->
+		<div class="alternate">
+			<div class="rightMainLogin">
+				<div class="rightLogin">
+					<div class="rightLoginHead">
+					<img src="/static/imgs/饭团.png" width="40px" style="position: absolute;top: 5px;left: 5px;"/></div>
+                    <p>Hi!<a id="login_pickname" style="text-decoration: none"></a>&nbsp;&nbsp;你好~</p>
+					<input type="button" value="登录" style="top:50%;" id="button_login" onclick="document.getElementById('login_grid').style.opacity='1';document.getElementById('login_fog').style.display='block'"/>
+					<input type="button" value="注册"style="top: 70%;" id="ony"  onclick="location.replace('/ftapp/register/')"/>
+				</div>
+				<div class="QRcode">
+					<img src="/static/imgs/myQRcode.jpg" />
+					<a style="color: #999;">扫描二维码,享更多优惠~</a>
+				</div>
+			</div>
+			<!--此处为图片区-->
+			<div class="catalog">
+				<a>饭团外卖</a><a>口碑商家</a><a>高档酒店</a><a>实惠餐厅</a><a>多人聚会</a><a>商家入驻</a>
+			</div>
+			<div class="imgArea">
+				<div class="alternateImg">
+					<div class="alter" id="alterimg" >
+						<img src="/static/imgs/fantuan5.jpg" id="i1" style="position: absolute;"/>
+						<img src="/static/imgs/fantuan2.jpg" id="i2" style="position: absolute;left: 830px;"/>
+						<img src="/static/imgs/fantuan3.jpg" id="i3" style="position: absolute;z-index: -1;"/>
+					</div>
+				</div>
+				<img src="/static/imgs/ktv.jpg" style="position: absolute;right: 10px; width: 180px;" />
+				<div class="botStaticImg">
+					<img src="/static/imgs/hotel.png" width="270px" height="170px"/><img src="/static/imgs/knowledge.jpg" height="170px" />
+					<img src="/static/imgs/merchant.jpg" height="170px" width="180px" style="position: absolute;right: 10px;bottom: 0px;margin-right: 0;"/>
+				</div>
+			</div>
+		</div>
+        {#	此处为左边导航区	#}
+		<div class="left">
+			<div class="navigate_head" style="font-size: 20px;color: #fff;margin: 13px 15px;font-family: '新宋体';">全部分类</div>
+			<div class="navigate">
+				<ul>
+					<li><img src="/static/imgs/liImg/热门.png" />热门分类<img src="/static/imgs/liImg/火(2).png" style="width: 20px;position: absolute;right: 86px;" >
+						<img src="/static/imgs/liImg/右.png" style="position: absolute;right: 30px;height: 15px;width: 15px;margin-top: 3px;">
+						<ul class="float">
+							<div class="floatTitle"><a>热门分类</a></div>
+							<p>烧烤烤肉</p><a href="/ftapp/huoguo/"><p>火锅</p></a><p>牛排海鲜自助</p><p>烧烤烤肉</p><p>西餐</p><p>酒吧</p>
+						</ul>
+					</li>
+					<li><img src="/static/imgs/liImg/自助餐.png" />自助餐<img src="/static/imgs/liImg/右.png" style="position: absolute;right: 30px;height: 15px;width: 15px;margin-top: 3px;">
+					<ul class="float">
+							<div class="floatTitle"><a>自助餐</a></div>
+							<p>火锅自助</p><p>自助烤肉</p><p>牛排海鲜自助</p><p>自助披萨</p>
+						</ul></li>
+					<li><img src="/static/imgs/liImg/小吃.png" />小吃快餐<img src="/static/imgs/liImg/右.png" style="position: absolute;right: 30px;height: 15px;width: 15px;margin-top: 3px;">
+                            <ul class="float">
+							<div class="floatTitle"><a>小吃快餐</a></div>
+							<p>肯德基</p><p>麦当劳</p><p>必胜客</p><p>华莱士</p><p>沙县小吃</p><p>黄焖鸡</p><p>云南过桥米线</p>
+						</ul>
+                    </li>
+					<a><li><img src="/static/imgs/liImg/火锅.png" />火锅<img src="/static/imgs/liImg/火(2).png"style="width: 20px;position: absolute;right: 86px;"></a>
+					<img src="/static/imgs/liImg/右.png" style="position: absolute;right: 30px;height: 15px;width: 15px;margin-top: 3px;">
+                            <ul class="float">
+                                    <div class="floatTitle"><a>火锅</a></div>
+                                    <p>重庆火锅</p><p>刘一手火锅</p><p>四川火锅</p><p>自助火锅</p><p>串串香</p>
+                            </ul></li>
+					<li><img src="/static/imgs/liImg/多人.png" />聚餐宴请<img src="/static/imgs/liImg/右.png" style="position: absolute;right: 30px;height: 15px;width: 15px;margin-top: 3px;">
+                            <ul class="float">
+                                    <div class="floatTitle"><a>聚餐宴请</a></div>
+                                    <p>3~4人</p><p>5~10人</p><p>10人以上</p><p>多桌包间</p>
+                            </ul></li>
+                    </li>
+					<li><img src="/static/imgs/liImg/西餐.png" />西餐<img src="/static/imgs/liImg/右.png" style="position: absolute;right: 30px;height: 15px;width: 15px;margin-top: 3px;"></li>
+					<li><img src="/static/imgs/liImg/酒杯.png" />咖啡/酒吧<img src="/static/imgs/liImg/右.png" style="position: absolute;right: 30px;height: 15px;width: 15px;margin-top: 3px;"></li>
+					<li><img src="/static/imgs/liImg/烧烤.png" />烧烤烤肉<img src="/static/imgs/liImg/火(2).png"style="width: 20px;position: absolute;right: 86px;">
+					<img src="/static/imgs/liImg/右.png" style="position: absolute;right: 30px;height: 15px;width: 15px;margin-top: 3px;"></li>
+					<li><img src="/static/imgs/liImg/海鲜.png" />海鲜<img src="/static/imgs/liImg/右.png" style="position: absolute;right: 30px;height: 15px;width: 15px;margin-top: 3px;"></li>
+					<li><img src="/static/imgs/liImg/汤菜.png" />汤/粥/炖菜<img src="/static/imgs/liImg/右.png" style="position: absolute;right: 30px;height: 15px;width: 15px;margin-top: 3px;"></li>
+					<li><img src="/static/imgs/liImg/其他.png" />其他分类<img src="/static/imgs/liImg/右.png" style="position: absolute;right: 30px;height: 15px;width: 15px;margin-top: 3px;"></li>
+				</ul>
+			</div>
+		</div>
+        </div>
+	<div class="foot">
+		<div class="footInfo">
+			<div class="footA" style="position: absolute;left: 60px;">
+			<a>服务条款</a><a>|</a><a>隐私政策</a><a>|</a><a>饭团客服</a><a>|</a>
+			<a>商务合作</a><a>|</a><a>关于团队</a><a>|</a><a>网站导航</a></div>
+			<p style="position: absolute;top: 14px; left: 100px;">COPYRIGHT © 2018 – 2019 FANTUAN. ALL RIGHTS RESERVED.</p>
+			<p style="position: absolute;top: 36px;left: 40%;">饭团公司 版权所有</p>
+		</div>
+	</div>
+        {# 此处为登录成功提示框#}
+    <div class="success" id="success" >
+			<img src="/static/rg_imgs/对.png" width="50px" style="position: absolute;top: 50px; left: 40px;" />
+			<p style="position: absolute; top: 50px; left: 110px;font-size: 20px;margin-top: 13px;">注册成功,将为您跳转到主界面</p>
+			<p id="countdown" style="position: absolute;left: 190px;top: 100px; font-size: 20px;"></p>
+			<input type="button" value="确定">
+		</div>
+	</body>
+</html>

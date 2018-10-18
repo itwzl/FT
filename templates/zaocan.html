@@ -1,0 +1,21 @@
+{% extends 'index.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block di4 %}
+ <a href='/ftapp/shop/?i=7'>
+    <img style="width: 280px;height: 180px" src='{{ alli.7.photo }}'>
+     <p style="color:#fe8e44">星级:★★★</p>
+    <p>食品:{{ alli.7.food }}</p>
+    <p>店名:{{ alli.7.shop }}</p>
+    <p>价格:{{ alli.7.rate }}</p>
+    <P>地址:{{ alli.7.address }}</P>
+</a>
+
+{% endblock %}
+</body>
+</html>

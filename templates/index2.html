@@ -1,0 +1,64 @@
+{% extends 'index.html' %}
+{% load static from staticfiles %}
+{#{% block  cssandjs%}#}
+{#<link rel="stylesheet" type="text/css" href="/static/css/index1.css">#}
+{#{% endblock %}#}
+{% block di0 %}
+ <a href='/ftapp/shop/?i=6'>
+    <img  src='{{ alli.6.photo }}'>
+     <p style="color:#fe8e44">星级:★★</p>
+    <p>食品:{{ alli.6.food }}</p>
+    <p>店名:{{ alli.6.shop }}</p>
+    <p>价格:{{ alli.6.rate }}</p>
+    <P>地址:{{ alli.6.address }}</P>
+</a>
+{% endblock %}
+{% block di1 %}
+<a href='/ftapp/shop/?i=7'>
+    <img  src='{{ alli.7.photo }}'>
+     <p style="color:#fe8e44">星级:★★★</p>
+    <p>食品:{{ alli.7.food }}</p>
+    <p>店名:{{ alli.7.shop }}</p>
+    <p>价格:{{ alli.7.rate }}</p>
+    <P>地址:{{ alli.7.address }}</P>
+</a>
+{% endblock %}
+{% block di2 %}
+ <a href='/ftapp/shop/?i=8'>
+    <img style="width: 270px;height: 180px"  src='{{ alli.8.photo }}'></a>
+     <p style="color:#fe8e44">星级:★★★★</p>
+    <p>食品:{{ alli.8.food }}</p>
+    <p>店名:{{ alli.8.shop }}</p>
+    <p>价格:{{ alli.8.rate }}</p>
+    <P>地址:{{ alli.8.address }}</P>
+{% endblock %}
+{% block di3%}
+ <a href='/ftapp/shop/?i=9'>
+    <img style="width: 270px;height: 180px" src='{{ alli.9.photo }}'>
+     <p style="color:#fe8e44">星级:★★★★★</p>
+    <p>食品:{{ alli.9.food }}</p>
+    <p>店名:{{ alli.9.shop }}</p>
+    <p>价格:{{ alli.9.rate }}</p>
+    <P>地址:{{ alli.9.address }}</P>
+</a>
+{% endblock %}
+{% block di4 %}
+ <a href='/ftapp/shop/?i=10'>
+    <img style="width: 270px;height: 180px"  src='{{ alli.10.photo }}'>
+     <p style="color:#fe8e44">星级:★★★</p>
+    <p>食品:{{ alli.10.food }}</p>
+    <p>店名:{{ alli.10.shop }}</p>
+    <p>价格:{{ alli.10.rate }}</p>
+    <P>地址:{{ alli.10.address }}</P>
+</a>
+{% endblock %}
+{% block di5 %}
+  <a href="/ftapp/shop/?i=11">
+    <img style="width: 270px;height: 180px"  src='{{ alli.11.photo }}'>
+     <p style="color:#fe8e44">星级:★★★★★</p>
+    <p>食品:{{ alli.11.food }}</p>
+    <p>店名:{{ alli.11.shop }}</p>
+    <p>价格:{{ alli.11.rate }}</p>
+    <P>地址:{{ alli.11.address }}</P>
+</a>
+{% endblock %}

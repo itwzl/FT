@@ -1,0 +1,72 @@
+{% extends 'index.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+{#    <link rel="stylesheet" type="text/css" href="/static/css/index1.css">#}
+</head>
+<body>
+{% block di0 %}
+  <a   href='/ftapp/shop/?i=0'>
+    <img  src='{{ alli.0.photo }}'></a>
+    <p style="color:#fe8e44">星级:★★★★</p>
+    <p>食品:{{ alli.0.food }}</p>
+    <p>店名:{{ alli.0.shop }}</p>
+    <p>价格:{{ alli.0.rate }}</p>
+    <P>地址:{{ alli.0.address }}</P>
+{% endblock %}
+{% block di1 %}
+        <a href='/ftapp/shop/?i=1'>
+    <img  src='{{ alli.1.photo }}'>
+     <p style="color:#fe8e44">星级:★★★★★</p>
+    <p>食品:{{ alli.1.food }}</p>
+    <p>店名:{{ alli.1.shop }}</p>
+    <p>价格:{{ alli.1.rate }}</p>
+    <P>地址:{{ alli.1.address }}</P>
+</a>
+{% endblock %}
+{% block di2 %}
+ <a href='/ftapp/shop/?i=2'>
+    <img  src='{{ alli.2.photo }}'>
+     <p style="color:#fe8e44">星级:★★★</p>
+    <p>食品:{{ alli.2.food }}</p>
+    <p>店名:{{ alli.2.shop }}</p>
+    <p>价格:{{ alli.2.rate }}</p>
+    <P>地址:{{ alli.2.address }}</P>
+</a>
+{% endblock %}
+{#{% block di3%}#}
+{# <a  href='/ftapp/shop/?i=3'>#}
+{#    <img  src='{{ alli.3.photo }}'>#}
+{#     <p style="color:#fe8e44">星级:★★★★★</p>#}
+{#    <p>食品:{{ alli.3.food }}</p>#}
+{#    <p>店名:{{ alli.3.shop }}</p>#}
+{#    <p>价格:{{ alli.3.rate }}</p>#}
+{#    <P>地址:{{ alli.3.address }}</P>#}
+{#</a>#}
+{#{% endblock %}#}
+{#{% block di4 %}#}
+{# <a  href='/ftapp/shop/?i=4'>#}
+{#    <img  src='{{ alli.4.photo }}'>#}
+{#     <p style="color:#fe8e44">星级:★★★</p>#}
+{#    <p>食品:{{ alli.4.food }}</p>#}
+{#    <p>店名:{{ alli.4.shop }}</p>#}
+{#    <p>价格:{{ alli.4.rate }}</p>#}
+{#    <P>地址:{{ alli.4.address }}</P>#}
+{#</a>#}
+{#{% endblock %}#}
+{#{% block di5 %}#}
+{#     <a  href='/ftapp/shop/?i=5'>#}
+{#    <img  src='{{ alli.5.photo }}'>#}
+{#     <p style="color:#fe8e44">星级:★★★</p>#}
+{#    <p>食品:{{ alli.5.food }}</p>#}
+{#    <p>店名:{{ alli.5.shop }}</p>#}
+{#    <p>价格:{{ alli.5.rate }}</p>#}
+{#    <P>地址:{{ alli.5.address }}</P>#}
+{#    </a>#}
+{#{% endblock %}#}
+
+
+</body>
+</html>

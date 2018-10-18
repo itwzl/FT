@@ -1,0 +1,49 @@
+{% extends 'index.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+{#<script type="application/javascript">#}
+{#    var i;#}
+{#    function change(i) {#}
+{#        location.replace('shop1.html')#}
+{#    }#}
+{#</script>#}
+<body>
+{% block di0 %}
+ <a   href='/ftapp/shop/?i=0'>
+    <img  src='{{ alli.0.photo }}'></a>
+    <p style="color:#fe8e44">星级:★★★★</p>
+    <p>食品:{{ alli.0.food }}</p>
+    <p>店名:{{ alli.0.shop }}</p>
+    <p>价格:{{ alli.0.rate }}</p>
+    <P>地址:{{ alli.0.address }}</P>
+{% endblock %}
+
+{% block di1 %}
+ <a href='/ftapp/shop/?i=1'>
+    <img style="width: 280px;height: 180px" src='{{ alli.1.photo }}'>
+     <p style="color:#fe8e44">星级:★★★★★</p>
+    <p>食品:{{ alli.1.food }}</p>
+    <p>店名:{{ alli.1.shop }}</p>
+    <p>价格:{{ alli.1.rate }}</p>
+    <P>地址:{{ alli.1.address }}</P>
+</a>
+{% endblock %}
+{% block di2 %}
+ <a href='/ftapp/shop/?i=2'>
+    <img style="width: 280px;height: 180px" src='{{ alli.2.photo }}'>
+     <p style="color:#fe8e44">星级:★★★</p>
+    <p>食品:{{ alli.2.food }}</p>
+    <p>店名:{{ alli.2.shop }}</p>
+    <p>价格:{{ alli.2.rate }}</p>
+    <P>地址:{{ alli.2.address }}</P>
+</a>
+
+{% endblock %}
+
+
+</body>
+</html>

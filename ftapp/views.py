@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render,render_to_response
 from ftapp.models import Fantuan
 from ftapp.models import Fantuan2
 from ftapp.models import user
+from ftapp.models import Cart
 # Create your views here.
 
 
@@ -35,15 +36,26 @@ def index2(request):
     return render(request,'index2.html',{'alli':alli})
 def shop(request):
     si = int(request.GET.get('i'))
-    return render(request,'shop.html',{'alli':alli[si],'allc':allc[si]})
+    return render(request,'shop.html',{'alli':alli[si],'allc':allc[si],'si':si})
+def shopct(request):
+    ctname=request.POST.get('keyword')
+    for ct in alli:
+        ctname1=ct.shop
+        if ctname1==ctname:
+            ctno=ct.id-1
+            return render(request,'shopct.html',{'alli':alli[ctno],'allc':allc[ctno],'ctno':ctno})
 def detailsp1(request):
-    return render(request, 'detailsp1.html')
+    yn=int(request.GET.get('dn'))
+    return render(request, 'detailsp1.html',{'allc':allc[yn],'alli':alli[yn],'yn':yn})
 def detailsp2(request):
-    return render(request, 'detailsp2.html')
+    yn = int(request.GET.get('dn'))
+    return render(request, 'detailsp2.html',{'allc':allc[yn],'alli':alli[yn],'yn':yn})
 def detailsp3(request):
-    return render(request, 'detailsp3.html')
+    yn = int(request.GET.get('dn'))
+    return render(request, 'detailsp3.html',{'allc':allc[yn],'alli':alli[yn],'yn':yn})
 def detailsp4(request):
-    return render(request, 'detailsp4.html')
+    yn = int(request.GET.get('dn'))
+    return render(request, 'detailsp4.html',{'allc':allc[yn],'alli':alli[yn],'yn':yn})
 def huoguo(request):
     return render(request,'huoguo.html',{'alli':alli})
 def tiandian(request):
@@ -54,11 +66,27 @@ def zaocan(request):
     return render(request,'zaocan.html',{'alli':alli})
 def lingshi(request):
     return render(request,'lingshi.html',{'alli':alli})
+def buycart(request):
+    number=request.POST.get('Number')
+    bn=int(request.GET.get('gn'))
+    dpn=int(request.GET.get('dpi'))
+    deshlist=[allc[bn].desh1,allc[bn].desh2,allc[bn].desh3,allc[bn].desh4]
+    photolist=[allc[bn].photo1,allc[bn].photo2,allc[bn].photo3,allc[bn].photo4]
+    pricelist=[allc[bn].price1,allc[bn].price2,allc[bn].price3,allc[bn].price4]
+    photo=photolist[dpn-1]
+    desh=deshlist[dpn-1]
+    price=pricelist[dpn-1]
+    c=cart(photo=photo,desh=desh,number=number,price=price,id=dpn-1)
+    c.save()
+    print(photolist[dpn-1],deshlist[dpn-1],number,pricelist[dpn-1])
+    return render(request, 'cart.html',
+                  {'allc': allc[bn], 'number': number, 'photo': photolist[dpn - 1], 'desh': deshlist[dpn - 1],
+                   'price': pricelist[dpn - 1]})
 # def change(request):
 #     si=int(request.GET.get('i'))
 #     return render(request,'shop1.html',{'si':si,'alli':alli[si]})
 
-from django.shortcuts import render
+# from django.shortcuts import render
 from django.http import HttpResponse
 from django.http import JsonResponse
 from  ftapp.models import user
@@ -177,12 +205,12 @@ def loginverify(request):
 def MainView(request):
     return render(request,'Main.html')
 
-def dianji(request):
-    return render(request,'111.html')
-def quzhi(request):
-    num2=request.POST.get("phonenum")
-    print(num2+"***********************")
-    uname=user.objects.get(num=int(num2)).nickname
-    return HttpResponse(uname)
+# def dianji(request):
+#     return render(request,'111.html')
+# def quzhi(request):
+#     num2=request.POST.get("phonenum")
+#     print(num2+"***********************")
+#     uname=user.objects.get(num=int(num2)).nickname
+#     return HttpResponse(uname)
 
 

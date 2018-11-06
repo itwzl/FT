@@ -24,6 +24,8 @@ urlpatterns = [
     url(r'^getlgpassword/$',views.getlgpassword),
     url(r'^loginverify/$',views.loginverify),
     url(r'^Main/$',views.MainView),
-    url(r'^111/$',views.dianji),
-    url(r'^quzhi/$',views.quzhi)
+    url(r'^shopct/',views.shopct),
+    url(r'^cart/',views.buycart)
+    # url(r'^111/$',views.dianji),
+    # url(r'^quzhi/$',views.quzhi)
 ]

@@ -1,3 +1,5 @@
+.gross{width: 1200px;height: 530px;position: relative;margin: 0 auto;top: 30px}
+
 .left{	border: 1px solid #2bb6aa;position: absolute;width: 210px;height: 530px;	top: 0;left: 0;background: #28BFAC;}
 .navigate{	top: 50px;	width: 210px;	height: 480px;	background: -webkit-linear-gradient(-90deg,rgba(2,181,157,.85) 2%,rgba(22,146,183,.85) 100%);
 	position: absolute;}
@@ -6,7 +8,7 @@ li{	height: 30px;	list-style: none;	color: #fff;	cursor: pointer;	/*border-botto
 	margin-left: -40px;	padding-top: 10px;	padding-bottom: -10px;	padding-left: 40px;	/*border: 1px solid;*/}
 li:hover{	background: #53C9BE;}
 .navigate_head{	width: 210px;	height: 50px;	position: absolute;}
-.head{	width: 1200px;	height: 75px;margin-left: -600px;left: 50%;	top: 40px;	position: absolute;	padding-top: 25px;}
+.head{	width: 1200px;	height: 75px;margin:0 auto;	top: 40px;	position: relative;	padding-top: 25px;}
 .head input[type=text]{	width: 500px;	height: 40px;	left: 300px;	position: absolute;	border-radius: 5px;	outline: none;
 	        border: 1px solid #28BFAC;	padding-left: 10px;}
 .serchBac{	width: 30px;	height: 42px;	position: absolute;	background: #28BFAC;	left: 800px;	top: 25%;
@@ -163,7 +165,7 @@ body{
 	position: absolute;
 	left: 35px;
 }
-.foot{	width: 100%;	position: relative;	top: 140px;	height: 80px;	background: #F8F8F8;}
+.foot{	width: 100%;	position: relative;	top: 100px;	height: 80px;	background: #F8F8F8;}
 .footInfo{
 	width: 600px;
 	height: 80px;

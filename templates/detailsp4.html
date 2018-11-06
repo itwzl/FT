@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title>手撕鸡 - DeathGhost</title>
+<title>{{ allc.desh4 }}</title>
 <meta name="keywords" content="DeathGhost,DeathGhost.cn,web前端设,移动WebApp开发" />
 <meta name="description" content="DeathGhost.cn::H5 WEB前端设计开发!" />
 <meta name="author" content="DeathGhost"/>
@@ -48,8 +48,8 @@ $(function(){
  </section>
  <div class="Logo_search">
   <div class="Logo">
-   <img src="/static/images/ft.jpg" title="DeathGhost" alt="模板">
-      <a style="font-size: 50px">饭团</a>
+   <img src="/static/images/ft.jpg" title="" alt="模板" style="width: 50px;height: 50px;">
+      <a style="font-size: 40px;color: #28BFAC">饭团</a>
    <i></i>
    <span>武汉市 [ <a href="#">江夏区</a> ]</span>
   </div>
@@ -64,7 +64,7 @@ $(function(){
    <input type="submit" class="searchbutton" value="搜 索" />
    </div>
    </form>
-   <p class="hotkeywords"><a href="#" title="酸辣土豆丝">酸辣土豆丝</a><a href="#" title="这里是产品名称">螃蟹炒年糕</a><a href="#" title="这里是产品名称">牛奶炖蛋</a><a href="#" title="这里是产品名称">芝麻酱凉面</a><a href="#" title="这里是产品名称">滑蛋虾仁</a><a href="#" title="这里是产品名称">蒜汁茄子</a></p>
+   <p class="hotkeywords"><a href="#" title="酸辣土豆丝">酸辣土豆丝</a><a href="#" title="螃蟹炒年糕">螃蟹炒年糕</a><a href="#" title="牛奶炖蛋">牛奶炖蛋</a><a href="#" title="芝麻酱凉面">芝麻酱凉面</a><a href="#" title="滑蛋虾仁">滑蛋虾仁</a><a href="#" title="蒜汁茄子">蒜汁茄子</a></p>
   </div>
  </div>
  <nav class="menu_bg">
@@ -80,23 +80,23 @@ $(function(){
 <section class="slp">
  <section class="food-hd">
   <div class="foodpic">
-   <img src="/static/upload/03.jpg" id="showimg">
+   <img src="{{ allc.photo4 }}" id="showimg">
     <ul class="smallpic">
-     <li><img src="/static/upload/03.jpg" onmouseover="show(this)" onmouseout="hide()"></li>
+     <li><img src="{{ allc.photo4 }}" onmouseover="show(this)" onmouseout="hide()"></li>
     </ul>
   </div>
   <div class="foodtext">
    <div class="foodname_a">
-    <h1>手撕鸡</h1>
-    <p>西安市丈八路220号</p>
+    <h1>{{ allc.desh4 }}</h1>
+    <p>{{ alli.address }}</p>
    </div>
    <div class="price_a">
-    <p class="price01">促销：￥<span>59.00</span></p>
+    <p class="price01">促销：￥<span>{{ allc.price4 }}</span></p>
     <p class="price02">价格：￥<s>69.00</s></p>
    </div>
    <div class="Freight">
     <span>配送费用：</span>
-    <span><i>未央区</i>至<i>莲湖区</i></span>
+    <span><i>{{ alli.address }}</i>至<i>藏龙岛街道</i></span>
     <span>10.00</span>
    </div>
    <ul class="Tran_infor">
@@ -127,14 +127,14 @@ $(function(){
    <span class="VHtitle">看了又看</span>
    <ul class="Fsulist">
     <li>
-     <a href="detailsp1.html" target="_blank" title="酱爆茄子"><img src="/static/upload/03.jpg"></a>
-     <p>酱爆茄子</p>
-     <p>￥12.80</p>
+     <a href="detailsp1.html" target="_blank" title="手撕鸡"><img src="/static/upload/03.jpg"></a>
+     <p>手撕鸡</p>
+     <p>￥40.00</p>
     </li>
     <li>
-     <a href="detailsp1.html" target="_blank" title="酱爆茄子"><img src="/static/upload/02.jpg"></a>
-     <p>酱爆茄子</p>
-     <p>￥12.80</p>
+     <a href="detailsp1.html" target="_blank" title="焖汁五花肉"><img src="/static/upload/02.jpg"></a>
+     <p>焖汁五花肉</p>
+     <p>￥50.00</p>
     </li>
    </ul>
   </div>
@@ -155,7 +155,7 @@ $(function(){
     <!--case1-->
     <div class="menutab show">
       <div class="cont_padding">
-       <img src="/static/upload/03.jpg">
+       <img src="{{ allc.photo4 }}">
        <p>测试信息，可删除！</p>
        <p>1. 将土豆洗净刮皮。</p>
        <p>2. 先将土豆切成整齐的大薄片这样是切出均匀的丝的要点。</p>
@@ -173,18 +173,18 @@ $(function(){
        <tr>
        <td>
         还不错，速度倒是挺速度倒是挺快速度倒是挺快速度倒是挺快速度倒是挺快速度倒是挺快速度倒是挺快速度倒是挺快速度倒是挺快速度倒是挺快速度倒是挺快速度倒是挺快快...
-        <time>2016-05-31 22:30:39</time>
+        <time>2018-10-28 11:13:07</time>
        </td>
        <td align="right">DEATHGHOST</td>
        </tr>
       </table>
       <div class="TurnPage">
-         <a href="#">
+         <a href="/ftapp/index1/">
           <span class="Prev"><i></i>首页</span>
          </a>
-         <a href="#"><span class="PNumber">1</span></a>
-         <a href="#"><span class="PNumber">2</span></a>
-         <a href="#">
+         <a href="/ftapp/index1/"><span class="PNumber">1</span></a>
+         <a href="/ftapp/index2/"><span class="PNumber">2</span></a>
+         <a href="/ftapp/index2/">
          <span class="Next">最后一页<i></i></span>
         </a>
        </div>
@@ -201,20 +201,20 @@ $(function(){
        <th width="30%">成交时间</th>
        <tr height="40">
         <td>d***t</td>
-        <td>￥59</td>
+        <td>￥{{ allc.price4 }}</td>
         <td>1</td>
-        <td>2014-9-18 11:13:07</td>
+        <td>2018-10-28 11:13:07</td>
        </tr>
       </table>
 
      </div>
        <div class="TurnPage">
-         <a href="#">
+         <a href="/ftapp/index1/">
           <span class="Prev"><i></i>首页</span>
          </a>
-         <a href="#"><span class="PNumber">1</span></a>
-         <a href="#"><span class="PNumber">2</span></a>
-         <a href="#">
+         <a href="/ftapp/index1/"><span class="PNumber">1</span></a>
+         <a href="/ftapp/index2/"><span class="PNumber">2</span></a>
+         <a href="/ftapp/index2/">
          <span class="Next">最后一页<i></i></span>
         </a>
        </div>

@@ -31,3 +31,9 @@ class user(models.Model):
     num=models.BigIntegerField(primary_key=True)
     nickname=models.CharField(max_length=16)
     password=models.CharField(max_length=16)
+
+class Cart(models.Model):
+    photo=models.CharField(max_length=500)
+    desh=models.CharField(max_length=50)
+    number=models.IntegerField()
+    price=models.IntegerField()
